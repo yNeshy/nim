@@ -67,15 +67,23 @@ def line():
     for _ in range(10): print("_", end="_")
     print()
 
-if __name__ == "__main__":
-    import players
-    
-    game = Game([3, 5, 3])
-    player1 = players.MinimaxAlphaBeta()
-    player2 = players.Human("Yu")
+
+def TP2():
+    BOARD = [    3, 5, 7, 3, 1     ]
+    game = Game(BOARD)
+    print("Question 1:")
+    player2 = players.Minimax()
+    player1 = players.Human("Yu")
     
     game.play(player1, player2 )
 
+    print("Question 2:")
+    player2 = players.Minimax()
+    player1 = players.Human("Hao")
+    
+    game.play(player1, player2 )
+
+    print("Question 3:")
     line()
     print("Informations about the players: ")
     line()
@@ -83,3 +91,42 @@ if __name__ == "__main__":
     line()
     print(player2.info())
     line()
+
+
+if __name__ == "__main__":
+    import players
+    TP2()
+
+
+
+
+
+
+
+
+"""
+    # Choose the board here:
+    
+    game = Game(     [    3, 5, 3     ]      )
+    
+    # Choose players: 
+    player1 = players.MinimaxAlphaBeta()
+    player2 = players.Human("Yu")
+    
+    # Start
+    game.play(player1, player2 )
+
+
+
+    # Question 3
+    line()
+    print("Informations about the players: ")
+    line()
+    print(player1.info()  )
+    line()
+    print(player2.info())
+    line()
+
+
+
+"""

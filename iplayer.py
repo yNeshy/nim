@@ -1,4 +1,4 @@
-from copy import copy
+from copy import copy 
 
 class IPlayer :
     def __init__(self):

@@ -37,6 +37,7 @@ class Human(IPlayer):
         return self.name+":\nMoved: "+str(self.number_moves)+" times."
 
 
+
 # Question 1
 class Minimax(IPlayer):
     def __init__(self):
